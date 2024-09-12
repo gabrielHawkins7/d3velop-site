@@ -8,7 +8,7 @@ export function NavBar(){
   };
 
   return (
-    <nav className=" text-white fixed top-0 left-0 w-full z-20 ">
+    <nav className=" text-white fixed top-0 left-0 w-full z-2 ">
       <div className="container mx-auto flex justify-end items-center p-4 rounded-b-md">
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-lg">
@@ -26,7 +26,7 @@ export function NavBar(){
             {isMenuOpen ? (
               <img
                 src="https://example.com/close-icon.png"  // Replace with the actual URL of your close icon
-                alt="Close Menu"
+                alt="Open Menu"
                 className="h-6 w-6"
               />
             ) : (
@@ -44,13 +44,13 @@ export function NavBar(){
       <div
         className={`${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-        } overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-slate-800 text-white`}
+        } overflow transition-all duration-500 ease-in-out md:hidden  text-white`}
       >
-        <ul className="space-y-4 text-center py-4">
-          <li><a href="#" className="hover:text-steelblue block">Home</a></li>
-          <li><a href="#" className="hover:text-steelblue block">About</a></li>
-          <li><a href="#" className="hover:text-steelblue block">Services</a></li>
-          <li><a href="#" className="hover:text-steelblue block">Contact</a></li>
+        <ul className="flex justify-center space-x-8 text-lg">
+          <li><a href="#" className="hover:text-steelblue">Home</a></li>
+          <li><a href="#" className="hover:text-steelblue">About</a></li>
+          <li><a href="#" className="hover:text-steelblue">Services</a></li>
+          <li><a href="#" className="hover:text-steelblue">Contact</a></li>
         </ul>
       </div>
     </nav>
