@@ -1,8 +1,31 @@
+import { useEffect, useState } from "react";
 
 
 export function LandingPage(){
+  const images = [
+    '/images/img1.webp',
+    '/images/img2.webp',
+    '/images/img3.webp',
+  ];
+
+  // State to track the current image index
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Function to change the image every few seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change image every 5 seconds
+
+    // Cleanup the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, [images.length]);
+
+
     return(
-        <div className="bg-gradient-to-tl from-darkcharcol from-10% to-slategreen to-75% text-white min-h-screen flex items-center justify-center">
+        <div className="shadow-2xl bg-gradient-to-tl from-darkcharcol from-10% to-slategreen to-75% text-white min-h-screen flex items-center justify-center">
           <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 py-16 mt-16">
             <div className="lg:w-1/2 text-center lg:text-left">
               <div className="flex flex-row items-end">
@@ -25,13 +48,14 @@ export function LandingPage(){
                 </a>
               </div>
             </div>
-
-            <div className="lg:w-1/2">
-              <img
-                src="https://source.unsplash.com/random"
-                alt="todo"
-                className="w-full h-auto object-cover rounded-lg shadow-lg"
-              />
+            <div className=" flex w-full justify-center  m-11">
+              <div className="min-w-0 min-h-0  max-h-[480px] max-w-[480px] rounded-lg overflow-hidden shadow-lg">
+                <img  
+                  src={images[currentImageIndex]}
+                  alt="Hero"
+                  className=""
+                />
+              </div>
             </div>
           </div>
     </div>
