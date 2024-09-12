@@ -12,11 +12,11 @@ export function NavBar(){
     }
 
   return (
-    <nav className="fixed left-0 top-0 w-full text-white p-2 bg-shadowgray md:bg-transparent">
-      <div className="md:hidden flex flex-row w-full">
+    <nav className="fixed left-0 top-0 w-full text-white p-4 bg-shadowgray md:bg-transparent">
+      <div className="md:hidden flex flex-row w-full items-center">
         <div className="flex flex-row w-full items-end">
-        <p className="font-Montserrat text-md font-extrabold italic pr-[2px]">D3</p>
-        <p className="font-Montserrat text-sm font-extrabold italic">VELOP</p>
+          <p className="font-Montserrat text-2xl font-extrabold italic pr-[4px]">D3</p>
+          <p className="font-Montserrat text-lg font-extrabold italic">VELOP</p>
         </div>
         <div className="md:hidden">
           <button onClick={open}>Menu</button>
