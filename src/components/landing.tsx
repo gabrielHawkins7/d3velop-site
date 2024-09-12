@@ -24,7 +24,7 @@ export function LandingPage(){
 
 
     return(
-        <div className="flex min-w-fit items-center justify-center bg-gradient-to-tl from-darkcharcol from-10% to-slategreen to-75% text-white shadow-2xl">
+        <div className="flex w-screen items-center justify-center bg-gradient-to-tl from-darkcharcol from-10% to-slategreen to-75% text-white shadow-2xl">
           <div className="container mx-auto mt-16 flex max-h-full flex-col-reverse items-center justify-between px-8 py-16 lg:flex-row">
             <div className="lg:w-1/2 text-center lg:text-left">
               <div className="flex flex-row items-end">
