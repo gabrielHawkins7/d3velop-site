@@ -50,7 +50,7 @@ export function LandingPage(){
                   </a>
               </div>
             </div>
-            <div className=" flex h-auto justify-center items-center p-0 ">
+            <div className=" flex h-auto justify-center items-center p-5">
               <div className=" h-full rounded-lg overflow-auto">
               <img  
                   src={images[currentImageIndex]}
