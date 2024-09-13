@@ -51,8 +51,8 @@ export function LandingPage(){
                   </a>
               </div>
             </div>
-            <div className=" flex h-full justify-center items-center p-0 md:p-10 pt-10 md:pt-2 ">
-              <div className=" rounded-lg overflow-clip">
+            <div className=" flex h-full justify-center items-center p-5 md:p-10 pt-10 md:pt-2 bg-red-400 ">
+              <div className=" rounded-lg overflow-auto">
               <img  
                   src={images[currentImageIndex]}
                   alt="Hero"
