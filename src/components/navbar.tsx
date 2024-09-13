@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { Modal } from "./modal";
+import ReactDOM from "react-dom";
+import { createPortal } from 'react-dom';
 
 export function NavBar(){
     const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +15,13 @@ export function NavBar(){
     }
 
   return (
-    <nav className="fixed left-0 top-0 w-full text-white p-4 bg-shadowgray md:bg-transparent">
+    <nav className="fixed left-0 top-0 w-full text-white p-1 bg-shadowgray ">
       <div className="hidden md:flex flex-row w-full justify-end items-center">
         <a href="#" className="hover:text-steelblue block p-4">About</a>
-
         <a
-          href="#"
+          onClick={()=>{
+            setModal(true);
+          }}
           className="inline-block px-4 py-2 text-md font-Poppins text-white border-2 rounded-lg hover:bg-DeepTeal">
           Studio
         </a>
@@ -34,12 +38,11 @@ export function NavBar(){
       <div
         className={`${
           isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-        } md:hidden bg-shadowgray text-white overflow-hidden transition-all duration-300 ease-in-out`}
+        } md:hidden bg-shadowgray text-white overflow-hidden transition-all duration-500 ease-linear`}
       >
         <ul className="space-y-4 text-center py-4">
-          <li><a href="#" className="hover:text-steelblue block">Studio</a></li>
+          <li><a href="#showcase" onClick={open} className="hover:text-steelblue block">Products</a></li>
           <li><a href="#" className="hover:text-steelblue block">About</a></li>
-          <li><a href="#" className="hover:text-steelblue block">Services</a></li>
           <li><a href="#" className="hover:text-steelblue block">Contact</a></li>
         </ul>
       </div>

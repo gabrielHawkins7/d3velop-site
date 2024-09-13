@@ -11,6 +11,11 @@ export function LandingPage(){
   // State to track the current image index
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  const scroll = () => {
+    const section = document.querySelector( '#showcase' );
+    section!.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+  };
+
   // Function to change the image every few seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -41,7 +46,7 @@ export function LandingPage(){
                 </p>
                 <div className="mt-8">
                   <a
-                    href="#"
+                    href="#showcase"
                     className="inline-block px-4 py-2 text-lg font-medium text-white bg-steelblue  rounded-lg hover:bg-DeepTeal"
                   >
                     Get Started
