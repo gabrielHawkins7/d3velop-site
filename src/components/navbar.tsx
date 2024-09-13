@@ -15,13 +15,10 @@ export function NavBar(){
     }
 
   return (
-    <nav className="fixed left-0 top-0 w-full text-white p-1 bg-shadowgray ">
-      <div className="hidden md:flex flex-row w-full justify-end items-center">
+    <nav className="fixed left-0 top-0 w-full text-white p-4 md:p-1 bg-shadowgray ">
+      <div className="hidden md:flex flex-row w-full justify-end items-center pr-4">
         <a href="#" className="hover:text-steelblue block p-4">About</a>
         <a
-          onClick={()=>{
-            setModal(true);
-          }}
           className="inline-block px-4 py-2 text-md font-Poppins text-white border-2 rounded-lg hover:bg-DeepTeal">
           Studio
         </a>
@@ -32,7 +29,12 @@ export function NavBar(){
           <p className="font-Montserrat text-lg font-extrabold italic">VELOP</p>
         </div>
         <div className="md:hidden">
-          <button onClick={open}>Menu</button>
+          {
+            (!isOpen)?
+            <img src={"burgermenu.svg"} onClick={()=>setIsOpen(true)} className="w-10 h-10" />
+            :<img src={"close.svg"} onClick={()=>setIsOpen(false)} className="w-10 h-10" />
+
+          }
         </div>
       </div>
       <div

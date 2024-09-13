@@ -4,17 +4,15 @@ import { NavBar } from "./navbar";
 
 export function LandingPage(){
   const images = [
-    '/images/img1.webp',
-    '/images/img2.webp',
+    'https://images.unsplash.com/photo-1616093708407-8d93651b2b04?q=80&w=2950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://plus.unsplash.com/premium_photo-1664457233911-9bdbcf827cc3?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1702942568346-ae74cfeee7bb?q=80&w=2950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1556130293-32c94f521550?q=80&w=2906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   ];
 
   // State to track the current image index
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const scroll = () => {
-    const section = document.querySelector( '#showcase' );
-    section!.scrollIntoView( { behavior: 'smooth', block: 'start' } );
-  };
 
   // Function to change the image every few seconds
   useEffect(() => {
@@ -32,7 +30,7 @@ export function LandingPage(){
     return(
         <div className="flex h-screen w-full flex-col  items-center justify-center bg-gradient-to-tl from-darkcharcol from-10% to-slategreen to-75%">
           <NavBar/>
-          <div className="container flex flex-col-reverse items-center p-5 md:flex-row ">
+          <div className="container flex h-full flex-col-reverse items-center p-5 md:flex-row">
             <div className=" text-white">
               <div className="flex flex-row justify-center items-end">
                 <p className="font-Montserrat text-8xl font-extrabold italic">D3</p>
@@ -53,8 +51,8 @@ export function LandingPage(){
                   </a>
               </div>
             </div>
-            <div className=" flex w-auto justify-center p-5">
-              <div className=" w-full h-auto rounded-lg overflow-auto">
+            <div className=" flex h-full justify-center items-center p-0 md:p-10 pt-10 md:pt-2 ">
+              <div className=" rounded-lg overflow-clip">
               <img  
                   src={images[currentImageIndex]}
                   alt="Hero"
