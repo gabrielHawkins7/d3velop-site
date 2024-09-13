@@ -42,7 +42,7 @@ export function LandingPage(){
                 <div className="mt-8">
                   <a
                     href="#"
-                    className="inline-block px-4 py-2 text-lg font-medium text-white bg-steelblue  rounded-lg hover:bg-blue-700"
+                    className="inline-block px-4 py-2 text-lg font-medium text-white bg-steelblue  rounded-lg hover:bg-DeepTeal"
                   >
                     Get Started
                   </a>
