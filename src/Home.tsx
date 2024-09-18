@@ -1,7 +1,7 @@
 import { LandingPage } from './components/landing'
 import { Showcase } from './components/showcase'
 
-function App() {
+function Home() {
 
   return (
     <>
@@ -12,4 +12,4 @@ function App() {
   )
 }
 
-export default App
+export default Home
