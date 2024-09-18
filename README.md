@@ -7,7 +7,7 @@ D3VELOP is a suite of applications designed to serve the unique needs of film sh
  - **Cineon-Powered Conversion**: Industry-standard formulas for flawless digital conversion. 
  - - **Customizable Control**: Fine-tune every aspect of your conversion for ultimate precision. 
  - - **Supports All Film Types**: Compatible with 35mm, medium format, and large format negatives. > *D3Studio is the essential tool for photographers and filmmakers who want to digitize their film without losing its essence.* 
- ## Proof Of Concept Release [D3 Archive](https://github.com/gabrielHawkins7/d3velop/releases/tag/0.5.1) 
+ ## Proof Of Concept Release [D3velop](https://github.com/gabrielHawkins7/d3velop/releases/tag/0.5.1) 
  ### **D3 Archive** (Coming Soon)
   _The Future of Image Management, Built for Creatives._ D3 Archive is your go-to cloud storage solution, designed to keep your images organized, searchable, and easily shareable. With advanced tagging and search features, you can quickly locate specific images or collections, and with Lightroom-style editing tools coming soon, D3 Archive will be a one-stop shop for your creative workflow. 
  #### Key Features: 
