@@ -19,12 +19,12 @@ function App(){
       </video>
 
       {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-35"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30"></div>
 
       {/* Text Content */}
       <div className="relative flex items-center justify-center h-full">
         <div className="text-center px-6">
-        <div className=" text-white">
+        <div className=" text-stone-50">
               <div className="flex flex-row justify-center items-end">
                 <p className="font-Montserrat text-8xl font-extrabold italic">D3</p>
                 <p className="text-6xl font-Montserrat font-semibold italic pr-5 pb-1">VELOP</p>

@@ -1,28 +1,10 @@
 import { useEffect, useState } from "react";
 
 export function Navbar(){
-    const [showNavbar, setShowNavbar] = useState(false);
-
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY; // Current scroll position
-        const threshold = 600; // Adjust this value to set the scroll threshold
-        setShowNavbar(scrollPosition > threshold);
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => {
-        window.removeEventListener('scroll', handleScroll); // Cleanup event listener
-      };
-    }, []);
   
     return (
         <nav
-          className={`relative top-0 w-full bg-slate-500 text-white p-4 ease-in transition-opacity duration-500 ${
-            showNavbar ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`relative top-0 w-full bg-slate-500 text-white p-4`}
         >
          <div className="hidden md:flex flex-row w-full justify-end items-center pr-4">
       <div className="flex flex-row w-full items-end">
