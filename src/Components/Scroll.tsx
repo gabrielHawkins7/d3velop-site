@@ -1,6 +1,16 @@
+import { useEffect, useState } from "react";
 
 
 export function Scroll(){
+
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        // Trigger fade-in effect after the component mounts
+        const timer = setTimeout(() => setIsVisible(true), 1000); // Slight delay for smoother effect
+        return () => clearTimeout(timer); // Cleanup timeout
+    }, []);
 
     const handleScrollDown = () => {
         const nextSection = document.getElementById("maincontent");
@@ -11,7 +21,9 @@ export function Scroll(){
 
     return(<>
         <div
-            className="absolute bottom-6 w-full transform -translate-x-1/2 cursor-pointer text-white animate-bounce"
+            className={`absolute bottom-6 w-full transform -translate-x-1/2 cursor-pointer text-white animate-bounce transition-opacity duration-500 ease-in-out ${
+            isVisible ? "opacity-100" : "opacity-0"
+            }`}
             onClick={handleScrollDown}
             >
             <div className="text-center font-Poppins text-xl">Get Started</div>
